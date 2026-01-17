@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CSD 340 Module 2.2 Assignment">
+    <meta name="author" content="NOOR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <link rel="stylesheet" href="ALSALIHI_Mod2_2.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Assignment 2.2 – Building a Web Page Exercise, Part 2</h1>
+
+        <h2>Chapter 1: About Me</h2>
+
+        <p class="intro">
+            I grew up in a city that shaped a lot of who I am today. My hometown is known for its diverse culture and strong sense of community. Those early experiences helped me value hard work and family.
+        </p>
+
+        <p>
+            During my childhood, I spent a lot of time with my family and close friends.
+            <span class="sentence">I enjoy learning new skills and challenging myself academically.</span>
+            These experiences encouraged me to stay curious and motivated.
+        </p>
+
+        <p>
+            In my free time, I enjoy hobbies that help me relax and stay active. I like listening to music, going on walks, and spending time with my pets. These activities help me balance school and personal life.
+        </p>
+
+        <p>
+            Family is very important to me, and they have always supported my goals. Their encouragement has helped me pursue higher education and stay focused on my future. I am excited to continue growing both personally and professionally.
+        </p>
+
+        <hr />
+
+        <address>
+            <p>
+                <a href="https://www.bellevue.edu" target="_blank">Bellevue University</a>
+            </p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+
+    </div>
+</body>
+</html>
