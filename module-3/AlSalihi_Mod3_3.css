@@ -1,0 +1,73 @@
+/* Container is optional, but helps keep content neat */
+#container {
+  width: 100%;
+}
+
+/* Requirement: h1 centered */
+h1 {
+  text-align: center;
+}
+
+/* Requirement: side-by-side divs must be 45% */
+.left,
+.right {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Adds spacing between the two columns */
+.right {
+  margin-left: 5%;
+}
+
+/* Requirement: h3 weight 500 */
+h3 {
+  font-weight: 500;
+}
+
+/* Requirement: lists weight 300 */
+ol,
+ul {
+  font-weight: 300;
+}
+
+/* Requirement: Ordered list + its title border, radius, padding */
+.left h3,
+.left ol {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Keep numbers inside the border */
+.left ol {
+  list-style-position: inside;
+}
+
+/* Requirement: Unordered list + its title dashed border, radius, padding */
+.right h3,
+.right ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Upper-roman bullets and keep them inside the border */
+.right ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Requirement: bottom div width 100%, margin-top 60% */
+.bottom {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+/* Requirement: hover shows underline */
+a:hover {
+  text-decoration: underline;
+}
