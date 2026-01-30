@@ -1,0 +1,64 @@
+/* container similar to screenshot spacing */
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* orange header */
+h1 {
+  text-align: center;
+  color: rgba(200, 80, 0, 0.9);
+  margin-top: 25px;
+}
+
+/* gallery grid + outer border */
+#image-gallery {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(200, 80, 0, 0.9);
+}
+
+/* each column */
+.gallery-item {
+  padding: 30px 10px;
+}
+
+/* vertical divider lines between columns */
+.gallery-item + .gallery-item {
+  border-left: 1px solid rgba(200, 80, 0, 0.9);
+}
+
+/* orange h3 centered */
+h3 {
+  text-align: center;
+  color: rgba(200, 80, 0, 0.9);
+  margin-bottom: 25px;
+}
+
+/* center image */
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+/* image size similar to screenshot */
+img {
+  width: 140px;      /* adjust if needed */
+  height: auto;
+}
+
+/* italic orange caption */
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  color: rgba(200, 80, 0, 0.9);
+  margin-top: 10px;
+}
+
+/* link bottom-right like screenshot */
+.back-link {
+  margin-top: 180px;     /* pushes it down */
+  text-align: right;
+  padding-right: 20px;
+}
