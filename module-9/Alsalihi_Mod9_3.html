@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    /* Simple student-style layout */
+    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; max-width:900px; margin:30px auto; padding:0 16px; color:#111; }
+    h1 { font-size:22px; margin-bottom:6px; }
+    .meta { font-size:13px; color:#444; margin-bottom:14px; }
+    .box { background:#fafafa; border:1px solid #ddd; padding:14px; border-radius:6px; }
+    p { margin:12px 0; }
+    .blank { display:inline-block; min-width:70px; text-align:center; border-bottom:2px dashed #999; padding:0 6px; font-weight:600; }
+    .controls { margin-top:12px; }
+    button { margin-right:6px; padding:6px 8px; border-radius:4px; border:1px solid #666; background:#fff; cursor:pointer; }
+    /* small hint text */
+    .hint { color:#666; font-size:12px; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+  <div class="meta">Name: Noor El-din Alsalihi &nbsp; | &nbsp; Date: <span id="dateNow"></span></div>
+
+  <div class="box">
+    <p>
+      I was late to the small ferry, carrying a single <span id="s1" class="blank">_____</span>
+      that I’d found near the pier. A man laughed from the ticket line and said,
+      “That little <span id="s2" class="blank">_____</span> will get you where you need.”
+    </p>
+
+    <p>
+      We walked under a tired streetlight until the sky became <span id="s3" class="blank">_____</span>.
+      I thought about the promise I made the year before to keep looking for
+      the <span id="s4" class="blank">_____</span> in ordinary days.
+    </p>
+
+    <p>
+      The ferry horn sounded and the city folded up like a map. It felt small and possible.
+    </p>
+  </div>
+
+  <div class="controls">
+    <button id="reveal1">Reveal 1</button>
+    <button id="reveal2">Reveal 2</button>
+    <button id="reveal3">Reveal 3</button>
+    <button id="reveal4">Reveal 4</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <div class="hint">Tip: Click each "Reveal" button to fill the blank. Reset returns underscores.</div>
+
+  <script>
+    // -- student-editable words --
+    // change these to whatever words you want the buttons to reveal.
+    const w1 = "notebook";
+    const w2 = "stray cat";
+    const w3 = "indigo";
+    const w4 = "small joy";
+
+    // keep these as underscores so page loads with blanks
+    const blankText = "_____";
+
+    // get elements
+    const s1 = document.getElementById("s1");
+    const s2 = document.getElementById("s2");
+    const s3 = document.getElementById("s3");
+    const s4 = document.getElementById("s4");
+
+    // ensure blanks are shown on load
+    s1.textContent = blankText;
+    s2.textContent = blankText;
+    s3.textContent = blankText;
+    s4.textContent = blankText;
+
+    // attach button behavior
+    document.getElementById("reveal1").addEventListener("click", function() { s1.textContent = w1; });
+    document.getElementById("reveal2").addEventListener("click", function() { s2.textContent = w2; });
+    document.getElementById("reveal3").addEventListener("click", function() { s3.textContent = w3; });
+    document.getElementById("reveal4").addEventListener("click", function() { s4.textContent = w4; });
+
+    document.getElementById("reset").addEventListener("click", function() {
+      s1.textContent = blankText;
+      s2.textContent = blankText;
+      s3.textContent = blankText;
+      s4.textContent = blankText;
+    });
+
+    // show current date (simple)
+    document.getElementById("dateNow").textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
