@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f6fa;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:5px;
+    color:#555;
+}
+
+main{
+    max-width:1000px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    border:1px solid #ddd;
+    overflow:hidden;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.featured-img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.desc{
+    color:#555;
+    margin-top:10px;
+}
+
+.grid{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.thumb{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+    background:#fafafa;
+}
+
+.thumb:hover{
+    background:#f1f1f1;
+}
+
+.thumb img{
+    width:80px;
+    height:60px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    color:#777;
+}
+
+</style>
+
+<script>
+
+function updateImage(imageSrc, titleText, descriptionText){
+
+    document.getElementById("featuredImg").src = imageSrc;
+    document.getElementById("featuredTitle").textContent = titleText;
+    document.getElementById("featuredDesc").textContent = descriptionText;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+<p>Click a card on the right to change the featured display (uses onclick).</p>
+
+</header>
+
+<main>
+
+<!-- LEFT SIDE FEATURED DISPLAY -->
+
+<section class="card">
+
+<div class="card-body">
+
+<h2 id="featuredTitle">City Night Drive</h2>
+
+<p>This page updates the featured image and description based on user input.</p>
+
+</div>
+
+<img
+id="featuredImg"
+class="featured-img"
+src="images/city.jpg"
+alt="City Image"
+>
+
+<div class="card-body">
+
+<p id="featuredDesc" class="desc">
+
+I chose this because it shows an energetic vibe. The lights and skyline feel modern and exciting.
+
+</p>
+
+<p class="desc">
+
+Folder tip: module-10/images/ : city.jpg, beach.jpg, mountains.jpg, food.jpg
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- RIGHT SIDE OPTIONS -->
+
+<aside class="card">
+
+<div class="card-body">
+
+<h2>Pick a Theme</h2>
+
+<div class="grid">
+
+<div class="thumb"
+onclick="updateImage(
+'images/city.jpg',
+'City Night Drive',
+'I chose this because it shows an energetic vibe. The lights and skyline feel modern and exciting.'
+)">
+
+<img src="images/city.jpg" alt="City">
+
+<div>
+
+<strong>City Night</strong><br>
+
+<small>Bright lights, skyline, and a late-night drive vibe.</small>
+
+</div>
+
+</div>
+
+
+<div class="thumb"
+onclick="updateImage(
+'images/beach.jpg',
+'Beach Sunset',
+'This option is calming. It represents taking a break and enjoying a peaceful view.'
+)">
+
+<img src="images/beach.jpg" alt="Beach">
+
+<div>
+
+<strong>Beach</strong><br>
+
+<small>Calm ocean air and a sunset horizon.</small>
+
+</div>
+
+</div>
+
+
+<div class="thumb"
+onclick="updateImage(
+'images/mountains.jpg',
+'Mountain Escape',
+'Fresh air and nature make this a great escape from busy city life.'
+)">
+
+<img src="images/mountains.jpg" alt="Mountains">
+
+<div>
+
+<strong>Mountains</strong><br>
+
+<small>Fresh air, trails, and scenery.</small>
+
+</div>
+
+</div>
+
+
+<div class="thumb"
+onclick="updateImage(
+'images/food.jpg',
+'Food Discovery',
+'Trying new restaurants and discovering different flavors is always exciting.'
+)">
+
+<img src="images/food.jpg" alt="Food">
+
+<div>
+
+<strong>Food</strong><br>
+
+<small>Trying new restaurants and discovering flavors.</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</aside>
+
+</main>
+
+<footer>
+
+Alsalihi | Module 10.3 | <span id="year"></span>
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</footer>
+
+</body>
+
+</html>
