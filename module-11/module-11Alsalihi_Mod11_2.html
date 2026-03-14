@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#eef1f6;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:white;
+width:450px;
+margin:auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+color:#2c3e50;
+}
+
+input{
+width:80%;
+padding:10px;
+margin-top:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 15px;
+margin:10px 5px;
+border:none;
+border-radius:5px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.add{
+background:#28a745;
+}
+
+.delete{
+background:#dc3545;
+}
+
+.sort{
+background:#6f42c1;
+}
+
+#list{
+margin-top:20px;
+text-align:left;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+<div class="container">
+
+<p>
+Enter a task below, then click "Add" to save it.
+You can delete the last entry or sort the list.
+</p>
+
+<input type="text" id="taskInput" placeholder="Enter a task">
+
+<br>
+
+<button class="add" onclick="addItem()">Add</button>
+<button class="delete" onclick="deleteLast()">Delete Last Entry</button>
+<button class="sort" onclick="sortList()">Sort</button>
+
+<div id="list"></div>
+
+</div>
+
+<script>
+
+let todo = [];
+
+function addItem(){
+
+let task = document.getElementById("taskInput").value;
+
+if(task === ""){
+alert("Please enter a task.");
+return;
+}
+
+todo.push(task);
+
+alert("Added: " + task);
+
+document.getElementById("taskInput").value="";
+
+displayList();
+
+}
+
+function deleteLast(){
+
+if(todo.length === 0){
+alert("Nothing to delete.");
+return;
+}
+
+let removed = todo.pop();
+
+alert("Deleted: " + removed);
+
+displayList();
+
+}
+
+function sortList(){
+
+todo.sort();
+
+alert("List sorted.");
+
+displayList();
+
+}
+
+function displayList(){
+
+let output = "";
+
+for(let i=0;i<todo.length;i++){
+
+output += (i+1) + ". " + todo[i] + "<br>";
+
+}
+
+document.getElementById("list").innerHTML = output;
+
+}
+
+</script>
+
+</body>
+</html>
